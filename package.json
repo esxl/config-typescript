@@ -10,7 +10,7 @@
     "@types/node": "^16.11.22",
     "ajv": "^6.12.6",
     "babel-plugin-transform-import-meta": "^2.1.1",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "is-ci": "^3.0.1",
     "jest": "^28.1.1",
     "lint-staged": "^12.3.3",
