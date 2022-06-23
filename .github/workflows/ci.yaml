@@ -14,7 +14,8 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: cicdxl/action-es-package-ci@v0.2.0
+      - name: Node.js ${{ matrix.node-version }}
+        uses: cicdxl/action-es-package-ci@v0.2.0
         with:
           node-version: ${{ matrix.node-version }}
     strategy:
