@@ -1,0 +1,15 @@
+name: EcmaScript package CI
+
+env:
+  CI: true
+
+on:
+  pull_request:
+    branches: [main]
+
+  push:
+    branches: [main]
+
+jobs:
+  es-package-ci:
+    uses: cicdxl/action-es-package-ci@0.1.0
