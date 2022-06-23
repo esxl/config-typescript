@@ -1,4 +1,4 @@
-name: EcmaScript package CI
+name: CI
 
 env:
   CI: true
@@ -11,7 +11,7 @@ on:
     branches: [main]
 
 jobs:
-  es-package-ci:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: cicdxl/action-es-package-ci@v0.1.0
+      - uses: cicdxl/action-es-package-ci@v0.2.0
