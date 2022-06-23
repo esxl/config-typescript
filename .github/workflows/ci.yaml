@@ -15,3 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: cicdxl/action-es-package-ci@v0.2.0
+        with:
+          node-version: ${{ matrix.node-version }}
+    strategy:
+      matrix:
+        node-version: [16, 18]
