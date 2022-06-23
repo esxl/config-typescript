@@ -1,0 +1,53 @@
+{
+  "bugs": {
+    "url": "https://github.com/esxl/config-typescript/issues"
+  },
+  "description": "A reusable TypeScript configuration for any/all projects",
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^28.1.3",
+    "@types/node": "^16.11.22",
+    "ajv": "^6.12.6",
+    "babel-plugin-transform-import-meta": "^2.1.1",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "jest": "^28.1.1",
+    "lint-staged": "^12.3.3",
+    "prettier": "2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "engines": {
+    "node": ">=16.13.1 <18",
+    "npm": ">=8.1.2 <9"
+  },
+  "exports": "./tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "homepage": "https://github.com/esxl/config-typescript#readme",
+  "license": "SEE LICENSE IN README.md",
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "main": "./tsconfig.json",
+  "name": "@esxl/config-typescript",
+  "peerDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esxl/config-typescript.git"
+  },
+  "scripts": {
+    "format:check": "prettier --check --ignore-unknown .",
+    "format:fix": "prettier --ignore-unknown --write .",
+    "postversion": "git push origin --follow-tags",
+    "prepare": "is-ci || husky install",
+    "pre-commit": "lint-staged",
+    "preversion": "npm run format:check && npm test -- --coverage",
+    "test": "jest"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
