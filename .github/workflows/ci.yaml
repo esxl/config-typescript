@@ -12,4 +12,6 @@ on:
 
 jobs:
   es-package-ci:
-    uses: cicdxl/action-es-package-ci@v0.1.0
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cicdxl/action-es-package-ci@v0.1.0
