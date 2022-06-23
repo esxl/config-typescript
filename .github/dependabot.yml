@@ -37,7 +37,7 @@ updates:
       - 'bot'
       - 'bot-dependabot'
       - 'npm-dependencies'
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 10
     registries:
       - npm-github
     schedule:
