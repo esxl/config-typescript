@@ -1,4 +1,4 @@
-name: GitHub release
+name: Release
 
 env:
   CI: true
@@ -11,20 +11,18 @@ on:
 # https://github.com/actions/create-release#example-workflow---create-a-release
 jobs:
   build:
-    name: Create Release
+    name: Create release
     runs-on: ubuntu-latest
     steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
+      - env:
           # DO NOT use ${{ secrets.GITHUB_TOKEN }}, since it will not trigger
           # events, like the `release` event, and downstream workflows will
           # not run.
-          # See https://docs.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token.
+          # See https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow
           GITHUB_TOKEN: ${{ secrets.BOT_ACTIONS_RELEASE }}
+        uses: actions/create-release@v1
         with:
-          tag_name: ${{ github.ref }}
+          draft: true
+          prerelease: true
           release_name: ${{ github.ref }}
-          draft: false
-          prerelease: false
+          tag_name: ${{ github.ref }}
