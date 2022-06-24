@@ -10,8 +10,7 @@ on:
 
 # https://github.com/actions/create-release#example-workflow---create-a-release
 jobs:
-  build:
-    name: Create release
+  release:
     runs-on: ubuntu-latest
     steps:
       - env:
