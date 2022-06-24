@@ -23,7 +23,7 @@ updates:
     open-pull-requests-limit: 25
     schedule:
       interval: daily
-      time: 11:00
+      time: '11:00'
       timezone: Etc/UTC
 
   - package-ecosystem: npm
@@ -42,5 +42,5 @@ updates:
       - npm-github
     schedule:
       interval: daily
-      time: 11:00
+      time: '11:00'
       timezone: Etc/UTC
