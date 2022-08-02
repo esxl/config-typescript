@@ -5,7 +5,7 @@
   "description": "A reusable TypeScript configuration for any/all projects",
   "devDependencies": {
     "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-env": "^7.18.10",
     "@types/jest": "^28.1.6",
     "@types/node": "^16.11.47",
     "ajv": "^6.12.6",
